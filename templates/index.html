@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atividade do Aluno</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="./static/index.js"></script>
+    
+</head>
+<style>
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para o cabeçalho */
+h1 {
+    font-size: 24px;
+    color: #690069;
+    margin-top: 0;
+}
+
+/* Estilos para o texto de entrada */
+h4 {
+    font-size: 18px;
+    color: #690069;
+}
+
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+/* Estilos para o botão de previsão */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilos para a previsão e imagem de emoção */
+#prediction {
+    font-size: 20px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#emo_img_url {
+    display: block;
+    margin-top: 10px;
+}
+
+/* Estilos para a data */
+#display_date {
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Estilos para alinhar o conteúdo centralmente */
+.text-center {
+    text-align: center;
+}
+
+
+
+</style>
+<body>
+    <!--Data-->
+    <div>
+        <h4 id='display_date'>DATA</h4>
+    </div>
+
+    <!--Texto de Entrada -->
+    <div>
+        <h4>Digite o Texto</h4>
+        <textarea id="text" name="text_input" rows="4" maxlength="200" 
+                    placeholder="Como foi o seu dia?"></textarea>
+        <br><br>
+    </div>
+
+    <!--Botão de Previsão-->
+    <div>
+        <button id="predict_button" type="submit">Prever Emoção</button><br><br>
+    </div>
+
+    <!--Emoção Prevista-->
+    <div>
+        <p id="prediction" style="display:block"></p>
+        <img id="emo_img_url" src="" width="55" min-height="50" alt="" 
+        style="display:block">
+    </div>
+
+</body>
+
+</html>
